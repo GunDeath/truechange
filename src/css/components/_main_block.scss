@@ -1,0 +1,19 @@
+.wrapper_block{
+  height: 100vh;
+  @include display_flex(column, center, space-between);
+}
+
+.bottom_block{
+  height: 50px;
+  width: $container_width;
+  margin-bottom: 5vh;
+
+  @include display_flex (row, center, space-around);
+
+  p{
+    color: $title_color;
+    @include text_value(35px, 700);
+    text-shadow:  .05em 0 $background_color;
+  }
+}
+

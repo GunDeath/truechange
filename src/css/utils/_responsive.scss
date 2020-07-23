@@ -1,0 +1,348 @@
+@include media-lg{ //1024
+  //index.html
+  .wrapper_block{
+    .top_block{
+      .logo{
+        .logo_text{
+          font-size: 5vw;
+        }
+      }
+      .telegram{
+        .logo-span{
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+  .content_block{
+    display: flex;
+    justify-content: center;
+    .main_text{
+      font-size: 5vw;
+      margin-bottom: 7vh;
+    }
+    .fields{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-gap: 20px;
+      grid-template-areas:
+            'first_section  second_section'
+            'btn_submit btn_submit';
+      .first_field{
+        grid-area: first_section;
+      }
+      .second_field{
+        grid-area: second_section;
+      }
+      .btn_submit{
+        grid-area: btn_submit;
+        width: 50%;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+  .bottom_block{
+    p{
+      font-size: 3.5vw;
+    }
+  }
+  //call_us.html
+  .form_block{
+    margin-bottom: 25vh;
+    .form_text{
+      .form_text_h2{
+        font-size: 5vw;
+      }
+      .form_text_p{
+        font-size: 3vw;
+      }
+    }
+    .contact_form{
+      .msg_btn{
+        .btn_call_us{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .footer_block{
+    .all_footer{
+      .copyrite_block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .links{
+        width: 100%;
+        .footer_link{
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+
+  //get_info form
+  .additionally_main_block{
+    .text_main_block{
+      .small_text{
+        font-size: 3.5vw;
+      }
+    }
+    .form_all_elem{
+      .phone_form{
+        .label_block{
+          .label_field{
+            font-size: 3vw;
+          }
+        }
+        .input_blocks{
+          .info_field{
+            @include input_field(75%, $height_input, 25px);
+          }
+        }
+      }
+    }
+  }
+
+  //elaboration_form
+  .elaboration_form{
+    @include display_flex(column, center, space-between);
+    .top_text_block{
+      width: 80%;
+      margin-bottom: 15px;
+      .top_text{
+        text-align: center;
+        @include text_styles($title_color, 3vw, 700);
+      }
+      .check_pay_system{
+        text-align: center;
+      }
+    }
+    .main_elaboration_form{
+      margin-top: 15px;
+      width: 80%;
+    }
+  }
+
+}
+
+@include media-md{ //768
+  .wrapper_block{
+    .top_block{
+      .telegram{
+        span{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .content_block{
+    .fields{
+      display: grid;
+      grid-template-areas:
+            'first_section'
+            'second_section'
+            'btn_submit';
+      .first_field{
+        grid-area: first_section;
+        align-self: center;
+        justify-self: center;
+      }
+      .second_field{
+        grid-area: second_section;
+        align-self: center;
+        justify-self: center;
+      }
+      .btn_submit{
+        grid-area: btn_submit;
+        margin-right: 1.5rem;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+
+  .footer_block{
+    .all_footer{
+      .copyrite_block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .links{
+        width: 100%;
+        .footer_link{
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+
+  //call_us.html
+  .form_block{
+    margin-top: 65px;
+    min-height: 500px;
+    height: 65vh;
+    .form_text{
+      .form_text_p{
+        display: none;
+      }
+    }
+    .contact_form{
+      display: flex;
+      flex-direction: column;
+      .input_fields{
+        width: 100%;
+        .input{
+          font-size: 15px;
+        }
+      }
+      .msg_btn{
+        width: 100%;
+        textarea{
+          margin-bottom: 30px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  //get_info form
+  .additionally_main_block{
+    .text_main_block{
+      .main_text_info_form{
+        @include text_value(7.5vw, 700);
+      }
+      .small_text{
+        font-size: 5.5vw;
+      }
+    }
+    .form_all_elem{
+      .phone_form{
+        .label_block{
+          .label_field{
+            @include shadow_text(4.5vw, 700)
+          }
+        }
+        .input_blocks{
+          margin-bottom: 0px;
+          .info_field{
+            @include input_field(85%, 55px, 15px);
+          }
+        }
+      }
+      .btn_block{
+        .input_btn{
+          @include input_btn(55px, $title_color);
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  //elaboration_form
+  .elaboration_form{
+    @include display_flex(column, center, space-between);
+    .top_text_block{
+      width: 80%;
+      .top_text{
+        text-align: center;
+        @include text_styles($title_color, 4.1vw, 700);
+      }
+      .check_pay_system{
+        @include text_styles($title_color, 3.8vw, 700);
+        text-align: center;
+      }
+    }
+    .main_elaboration_form{
+      width: 80%;
+      .what_number_purse{
+        @include text_value(3vw, 700);
+      }
+      .how_much_he_pay{
+        @include text_value(3vw, 700);
+      }
+      .how_much_we_pay{
+        @include text_value(3vw, 700);
+      }
+    }
+  }
+  .post_form{
+    margin-top: -130px;
+    margin-bottom: 50px;
+  }
+}
+
+@include media-sm{ //320
+  .content_block{
+    .fields{
+      .field{
+        height: 10vh;
+      }
+      .sec_btn{
+        height: 10vh;
+      }
+      .btn_submit{
+        width: 70%;
+        margin-left: 1rem;
+        height: 10vh;
+      }
+    }
+  }
+
+  .bottom_block{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    p{
+      font-size: 4vw;
+    }
+  }
+
+  .footer_block{
+    .all_footer{
+      .links{
+        width: 100%;
+        .footer_link{
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+
+  //call_us.html
+
+  .wrapper_block{
+    .top_block{
+    }
+
+    .form_block{
+      min-height: 370px;
+      padding: 25px;
+      margin-top: 20px;
+      .contact_form{
+        .input_fields{
+          .input{
+            font-size: 12px;
+          }
+          .theme_input{
+            display: none;
+          }
+        }
+        .msg_btn{
+          .btn_call_us{
+            font-size: 15px;
+          }
+          textarea{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

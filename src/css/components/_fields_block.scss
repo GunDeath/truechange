@@ -1,0 +1,80 @@
+.content_block{
+  @include HW_value($container_width, 80vh);
+  @include display_flex (column, normal, space-around);
+  .main_text{
+    color: $title_color;
+    @include text_value(65px, 700);
+    text-shadow:  .05em 0 $background_color;
+  }
+
+  .fields{
+    padding-bottom: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    .field{
+      @include HW_value(70%, $height_input);
+      padding-left: 30px;
+      font-size: 25px;
+      border-radius: 25px 0 0 25px;
+      margin-right: 50px;
+    }
+    .first_field{
+      display: flex;
+      margin-right: 0;
+      img{
+        @include HW_value(50px, 50px);
+      }
+
+    }
+
+    .second_field{
+      display: flex;
+      margin-right: 0;
+      img{
+        @include HW_value(50px, 50px);
+      }
+    }
+
+    .sec_btn{
+      display: inline-block;
+      @include HW_value(100px, $height_input);
+      @include display_flex (row, center, space-between);
+      background-color: $title_color;
+      border-radius: 0 25px 25px 0;
+      padding-right: 30px;
+    }
+
+    .btn_submit{
+      @include input_btn($height_input, $title_color);
+    }
+  }
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  margin-top: 5px;
+  width: 50px;
+  background: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content img{
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #fff;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+

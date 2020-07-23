@@ -1,0 +1,72 @@
+@import "utils/veriables";
+@import "utils/functions";
+
+@import "components/call_us";
+@import "components/phone_form";
+@import "components/fields_block";
+@import "components/footer_block";
+@import "components/info_block";
+@import "components/main_block";
+@import "components/navbar_block";
+@import "components/elaboration_form";
+@import "components/rules";
+
+@import "utils/responsive";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: $title_color;
+}
+
+h2{
+  font-size: 75px;
+  color: $title_color;
+  font-weight: 700;
+  text-shadow:  .05em 0 $background_color;
+}
+
+body{
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.4;
+}
+
+input{
+  font-family: 'Arial', sans-serif;
+  border: none;
+  outline: none;
+}
+
+textarea{
+  font-family: 'Arial', sans-serif;
+  border: none;
+  outline: none;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.container{
+  width: $container_width;
+  margin: 0 auto ;
+
+}
+
+.main_block{
+  height: 100vh;
+  background: rgba(0, 0, 0, .6) url('../img/money_photo.jpg') no-repeat center;
+  background-blend-mode: darken;
+}

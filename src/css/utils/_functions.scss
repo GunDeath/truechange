@@ -1,0 +1,88 @@
+@mixin input_fields {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #fff;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+}
+
+@mixin display_flex($table, $horizontal, $vertical){
+  display: flex;
+  flex-direction: $table;
+  align-items: $horizontal;
+  justify-content: $vertical;
+}
+
+@mixin text_value($text_size, $text_weight){
+  font-size: $text_size;
+  font-weight: $text_weight;
+}
+
+@mixin text_styles($text_color, $text_size, $text_bold){
+  color: $text_color;
+  @include text_value($text_size, $text_bold);
+  text-shadow: .05em 0 $background_color;
+}
+
+@mixin btn_text_style {
+  color: $btn_color;
+  @include text_value(25px, 700);
+}
+
+@mixin shadow_text($text_size, $text_bold){
+  color: $title_color;
+  @include text_value($text_size, $text_bold);
+  text-shadow:  .05em 0 $background_color;
+}
+
+@mixin input_field($width_value, $height_value, $text_size){
+  @include HW_value($width_value, $height_value);
+  padding-left: 30px;
+  font-size: $text_size;
+  border-radius: 25px;
+  margin-right: 50px;
+}
+
+@mixin input_btn($height_value, $btn_color){
+  cursor: pointer;
+  display: inline-block;
+  @include btn_text_style;
+  background: $btn_color;
+  height: $height_value;
+  border-radius: 25px;
+}
+
+@mixin form_shadow_black($padding_value, $margin_bottom){
+  padding: $padding_value;
+  border: 0.5px solid #fff;
+  margin-bottom: $margin_bottom;
+  border-radius: 40px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+@mixin HW_value($w_value, $h_value){
+  width: $w_value;
+  height: $h_value;
+}
+
+@mixin media-lg{
+  @media screen and (max-width: 1024px){
+    @content;
+  }
+}
+
+@mixin media-md{
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin media-sm{
+  @media screen and (max-width: 320px){
+    @content;
+  }
+}

@@ -1,0 +1,35 @@
+.top_block{
+  width: $container_width;
+  margin-top: 2vh;
+
+  @include display_flex (row, center, space-between);
+
+
+  .logo{
+    .logo_text{
+      @include text_value(55px, 700);
+      color: $title_color;
+      text-shadow:  .07em 0 $background_color;
+    }
+  }
+
+  .telegram{
+    display: flex;
+    align-items: center;
+
+    a{
+      display: block;
+      @include display_flex (row, center, space-between);
+      span{
+        color: $title_color;
+        @include text_value(25px, 700);
+        text-shadow:  .07em 0 $background_color;
+      }
+
+      img{
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.info_block{
+  background: #FFFFFF;
+  .main_info{
+    display: grid;
+    align-items: center;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    .inform{
+      margin-top: 20px;
+      height: 250px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+}
+

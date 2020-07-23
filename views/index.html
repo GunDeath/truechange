@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="favicon.ico?v=1.1" rel="icon">
+    <title>TrueChange</title>
+</head>
+<body>
+
+<section class="main_block">
+    <div class="wrapper_block container">
+
+        <div class="top_block">
+            <div class="logo"><a href="/"><h1 class="logo_text">TrueChange</h1></a></div>
+            <div class="telegram">
+                <a href="https://t.me/best_change_ga"><img src="./img/Telegram-icon.png" alt=""><span class="logo-span">TrueChange</span></a>
+            </div>
+        </div>
+
+        <div class="content_block">
+            <div class="text_main_block" id="text_main_block">
+                <h2 class="main_text">Надежный и выгодный обмен <br> денег с элетронных кошельков</h2>
+            </div>
+
+            <form action="/get_info" method="post">
+                <div class="fields" id="fields_id">
+
+                    <div class="first_field">
+                        <input type="text" id="first_field" name="he_pay" class="field first_field" placeholder="От 100" required>
+                        <input type="hidden" name="first_field" id="system_name_first" value="ЯндексДеньги">
+                        <div class="dropdown">
+                            <button class="sec_btn" disabled><img src="./img/yandex.png" alt="" id="system_img_first"></button>
+                            <div class="dropdown-content" id="dropdown-content">
+                                <div class="style_links">
+                                    <img src="./img/qiwi_2.png" alt="" class="links_img" name="QIWI">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second_field">
+                        <input type="text" id="second_field" name="we_pay" class="field second_field" placeholder="До 10000">
+                        <input type="hidden" name="second_field" id="system_name_second" value="QIWI">
+                        <div class="dropdown">
+                            <button class="sec_btn" disabled><img src="./img/qiwi_2.png" alt="" id="system_img_second"></button>
+                            <div class="dropdown-content" id="dropdown-content_second">
+                                <div class="style_links">
+                                    <img src="./img/yandex.png" alt="" class="links_img_second" name="ЯндексДеньги">
+                                    <img src="./img/WebMoney.png" alt="" class="links_img_second" name="WebMoney">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn_submit" type="submit">Обменять</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="bottom_block">
+            <div>
+                <p>Более 1000 совершенных обменов</p>
+            </div>
+            <div>
+                <p>Мы всегда на связе ради Вас</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="info_block">
+    <div class="main_info container">
+        <div class="inform info_1">
+            <img src="./img/dialog.png" alt="">
+            <h3>Мы всегда готовы к диалогу</h3>
+            <p>Наша главная задача, чтобы вы <br>
+                остались довольны услугами сервиса. Для <br>
+                предложений, а также обратной связи загляните <br>
+                в раздел "Обратная связь"
+            </p>
+        </div>
+        <div class="inform info_2">
+            <img src="./img/special.png" alt="">
+            <h3>Специальные предложения при объемах</h3>
+            <p>
+                Если клиент часто обменивает большие суммы денег,<br>
+                мы будет составлять индивидуальную траекторию <br>
+                бонусов и скидок. Каждый останется доволен!
+            </p>
+        </div>
+        <div class="inform info_3">
+            <img src="./img/register.png" alt="">
+            <h3>Не требуется регистрации</h3>
+            <p>
+                При совершении обмена наш сервис не будет <br>
+                тербовать ни каких дополнительных данных, в том <br>
+                числе требования регистрации, или какие-либо <br>
+                другие способы подтверждения личности.
+            </p>
+        </div>
+        <div class="inform info_4">
+            <img src="./img/anonim.png" alt="">
+            <h3>Ананимность гарантируется</h3>
+            <p>
+                Право на конфеденциальность гарантировано <br>
+                не только конституцией, но и нами, доверяя нам, Вы <br>
+                можете быть уверены, Ваши данные не попадут в руки третьих лиц!
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer_block">
+    <div class="all_footer container">
+        <div class="copyrite_block">
+            <p class="footer_logo">TrueChange</p>
+            <p class="copiryte">Copyrite &copy; TrueChange 2019-2020.</p>
+        </div>
+        <div class="links">
+            <div class="about_us">
+                <a href="/about" class="footer_link">О нас</a>
+            </div>
+            <div class="rules">
+                <a href="" class="footer_link">Правила</a>
+            </div>
+            <div class="call_us">
+                <a href="/call_us" class="footer_link">Обратная связь</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

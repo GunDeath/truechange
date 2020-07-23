@@ -1,0 +1,57 @@
+.elaboration_form{
+  @include form_shadow_black(3rem, 15vh);
+  @include display_flex(row, center, space-between);
+  color: white;
+  .top_text_block{
+    width: 50%;
+    .top_text{
+      @include text_styles($title_color, 3vw, 700);
+    }
+    .check_pay_system{
+      @include text_styles($title_color, 2.5vw, 700);
+      .span_value{
+        color: limegreen;
+      }
+    }
+  }
+  .main_elaboration_form{
+    @include HW_value(40%, 100%);
+    display: grid;
+    grid-template-areas:
+    'phone_number phone_number'
+    'he_pay we_pay';
+    grid-gap: 20px;
+    align-items: center;
+    .p_text{
+      color: limegreen;
+    }
+    .what_number_purse{
+      @include display_flex(row, center, space-around);
+      @include text_value(2vw, 700);
+      grid-area: phone_number;
+    }
+    .how_much_he_pay{
+      @include display_flex(row, center, space-around);
+      @include text_value(1.5vw, 700);
+      grid-area: he_pay;
+    }
+    .how_much_we_pay{
+      @include display_flex(row, center, space-around);
+      @include text_value(1.5vw, 700);
+      grid-area: we_pay;
+    }
+  }
+}
+
+.post_form{
+  @include HW_value(100%, 20vh);
+  @include display_flex(column, center, flex-start);
+  margin-top: -30px;
+  margin-bottom: 30px;
+  .submit_input{
+    .submit_button{
+      @include input_btn($height_input, $title_color);
+      padding: 0 25px;
+    }
+  }
+}

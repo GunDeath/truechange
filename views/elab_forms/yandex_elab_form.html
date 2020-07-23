@@ -1,0 +1,14 @@
+<form action="https://money.yandex.ru/quickpay/confirm.xml" method="post" class="post_form">
+    <div class="input_fields">
+        <input type="hidden" name="receiver"      value="4100115334176884">
+        <input type="hidden" name="formcomment"   value="Перевод Yandex - <%= formValue.us_pay_system %>">
+        <input type="hidden" name="targets"       value="Осуществление обмена электронных денег">
+        <input type="hidden" name="quickpay-form" value="shop">
+        <input type="hidden" name="successURL"    value="https://blooming-island-92665.herokuapp.com/">
+        <input type="hidden" name="sum"           value="<%= formValue.his_pay %>" data-type="number" id="sum">
+        <input type="hidden" name="paymentType"   value="PC">
+    </div>
+    <div class="submit_input">
+        <input type="submit" value="Перевести" class="submit_button">
+    </div>
+</form>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet"></head>
+<title>TrueChange</title>
+</head>
+<body>
+
+<section class="main_block">
+    <div class="wrapper_block container">
+
+        <%- include('components/navbar.html'); %>
+
+        <div class="content_block">
+            <div class="additionally_main_block">
+                <div class="text_main_block" id="text_main_block">
+                    <h2 class="main_text_info_form"> <a href="/" class="back_home">&#8592</a> Заявка </h2>
+                    <h3 class="small_text">
+                        Меняю <span class="span_value"> <%= infoMoney.his_pay %>  <%= infoMoney.his_system %> </span> на
+                        <span class="span_value"> <%= infoMoney.we_pay %>  <%= infoMoney.us_system %> </span>
+                    </h3>
+                </div>
+                <form action="/letter" method="post" class="form_all_elem">
+                    <div class="phone_form">
+                        <div class="label_block">
+                            <label for="add_info_field" class="label_field"> Укажите номер <%= infoMoney.us_system %>: </label>
+                        </div>
+                        <div class="input_blocks">
+                            <input type="number" name="purse_number" class="info_field" id="add_info_field" placeholder="Номер <%= infoMoney.us_system %> ">
+                            <input type="hidden" name="order_id" value="" id="order_id">
+                            <input type="hidden" name="he_pay" value="<%= infoMoney.his_pay %>">
+                            <input type="hidden" name="we_must_pay" value="<%= infoMoney.we_pay %>">
+                            <input type="hidden" name="us_pay_system" value="<%= infoMoney.us_system %>">
+                            <input type="hidden" name="him_pay_system" value="<%= infoMoney.his_system %>">
+                        </div>
+                    </div>
+                    <div class="btn_block">
+                        <input type="submit" value="Оформить" class="input_btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom_block">
+            <div>
+                <p>Более 1000 совершенных обменов</p>
+            </div>
+            <div>
+                <p>Мы всегда на связе ради Вас</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<%- include('components/footer.html'); %>
+
+<script src="main.js"></script>
+</body>
+</html>

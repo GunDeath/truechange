@@ -1,0 +1,37 @@
+.all_rules_block{
+  text-align: center;
+
+  .title_h3{
+    color: #fff;
+    font-size: 35px;
+  }
+  .position_block{
+    @include display_flex(row, normal, space-between);
+    overflow-y: scroll;
+    height: 70vh;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    .rules_title{
+      color: #fff;
+      font-size: 25px;
+    }
+
+    .left_rules{
+      width: 49%;
+      text-align: left;
+      p{
+        color: #fff;
+      }
+    }
+
+    .right_rules{
+      width: 49%;
+      text-align: left;
+      p{
+        color: #fff;
+      }
+    }
+  }
+}
+

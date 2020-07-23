@@ -1,0 +1,44 @@
+.additionally_main_block{
+  @include display_flex(column, normal, center);
+  @include HW_value(100%, 70vh);
+
+  .text_main_block{
+    margin-bottom: 4vh;
+    .main_text_info_form{
+      @include text_styles($title_color, 65px, 700);
+      .back_home:hover{
+        color: $div_dark_paragraph-color;
+      }
+    }
+    .small_text{
+      color: $title_color;
+      @include text_value(35px, 700);
+      .span_value{
+        color: limegreen;
+      }
+    }
+  }
+  .form_all_elem{
+    height: 25vh;
+    @include display_flex(column, normal, space-around);
+    .phone_form{
+      .label_block{
+        .label_field{
+          @include shadow_text(3vw, 700)
+        }
+      }
+      .input_blocks{
+        margin-bottom: 15px;
+        .info_field{
+          @include input_field(65%, $height_input, 25px);
+        }
+      }
+    }
+    .btn_block{
+      .input_btn{
+        @include input_btn($height_input, $title_color);
+        padding: 0 25px;
+      }
+    }
+  }
+}
