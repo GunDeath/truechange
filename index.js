@@ -10,7 +10,7 @@ const favicon = require('serve-favicon');
 
 //App variables
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 5000;
 
 //Add body parser
 app.use(bodyParser.json());
