@@ -10,7 +10,7 @@ const favicon = require('serve-favicon');
 
 //App variables
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT =  5000;
 
 //Add body parser
 app.use(bodyParser.json());
@@ -36,7 +36,7 @@ app.engine('html', require('ejs').renderFile)
 //Start server
 function start() {
     try{
-        app.listen(PORT, () => console.log(`Server has been started... `))
+        app.listen(PORT, () => console.log(`Server has been started...  ${PORT}`))
     }catch (error) {
         console.log(error)
     }
